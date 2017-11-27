@@ -1,0 +1,19 @@
+<h1>Hello there </h1>
+
+<form #userForm="ngForm" (ngSubmit)="onFormSubmit(userForm)">
+    <table> 
+       <tr>
+            <td>Are you married? </td>
+        <td>
+         <input type="checkbox" name="married" [ngModel]="isMarried" #married="ngModel">
+        </td>
+       </tr>	 
+       <tr>
+        <td>Accept T & C </td>
+        <td>
+            <input type="checkbox" name="tc" [ngModel]="isTCAccepted" required #tc="ngModel">
+        </td>
+       </tr>
+       <button>Submit</button>
+    </table>  
+  </form> 
